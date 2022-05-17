@@ -1,7 +1,7 @@
 {
   "name": "shop",
   "version": "0.1.0",
-  "homepage": "https://github.com/svmurvi/veranda.github.io",
+  "homepage": "https://svmurvi.github.io/veranda.github.io",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.0",
