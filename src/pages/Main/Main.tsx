@@ -1,7 +1,5 @@
 import {
-  Button,
   Card,
-  CardActions,
   CardMedia,
   CardContent,
   Chip,
@@ -9,7 +7,6 @@ import {
   CardActionArea,
   Modal,
 } from "@mui/material";
-import { Box } from "@mui/system";
 import React, { useState } from "react";
 import { categories, products } from "../../assets/data/data";
 import banner from "../../assets/images/banner.jpeg";
@@ -20,7 +17,9 @@ import * as S from "./styled";
 
 const Main = () => {
   const [activeMenu, setActiveMenu] = useState(ProductCategory.Grill);
-  const [modalItem, setModalItem] = useState<Product | null>(null);
+  const [modalItem, setModalItem] = useState<Partial<Product> | null>(null);
+
+  const filterCategory = () => products.filter(({ category }) => category === activeMenu);
 
   return (
     <div>
@@ -47,8 +46,7 @@ const Main = () => {
           ))}
         </S.ChipsWrap>
         <S.ProductsWrap>
-          {products
-            .filter(({ category }) => category === activeMenu)
+          {filterCategory()
             .map((product) => (
               <Card
                 style={{

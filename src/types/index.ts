@@ -1,9 +1,13 @@
 enum ProductCategory {
   Grill = "grill",
-  Europe = "europe",
-  Japan = "japan",
-  Drinks = "drinks",
+  Hot = "hot",
+  Salad = "salad",
+  Desserts = "desserts",
 }
+
+type PartialProduct = Partial<Product>;
+type PartialProductsCategory = PartialProduct[];
+type ProductsCategory = PartialProduct[] & Pick<Product, 'category'>;
 
 type Product = {
   title: string;
@@ -16,4 +20,4 @@ type Product = {
 
 export { ProductCategory };
 
-export type { Product };
+export type { Product, PartialProduct, PartialProductsCategory, ProductsCategory };

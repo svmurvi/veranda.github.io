@@ -6,7 +6,7 @@ import Main from "../../pages/Main";
 import logo from "../../assets/images/logo.jpeg";
 import * as S from "./styled";
 
-function App() {
+const App = () => {
   return (
     <Router>
       <div style={{ background: "#000" }}>
@@ -14,7 +14,7 @@ function App() {
           <S.Content>
             <S.Row>
               <S.Logo src={logo} alt="" />
-              <Typography variant="h6">Ресторан Константиныч</Typography>
+              <Typography variant="h6">Кафе Veranda</Typography>
             </S.Row>
             <S.Row>
               <S.CustomLink to="/">Главная</S.CustomLink>
@@ -30,7 +30,7 @@ function App() {
       <S.Footer>
         <S.Content>
           <Typography variant="body2">
-            © Все права защищены {new Date().getFullYear()}. Бизнесмен Константиныч
+            © Все права защищены {new Date().getFullYear()}. Снежана Александровна
           </Typography>
           <S.Row>
             <S.CustomLink to="/">Главная</S.CustomLink>
